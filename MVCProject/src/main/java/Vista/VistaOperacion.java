@@ -130,10 +130,10 @@ public class VistaOperacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnMultiplicar;
+    public javax.swing.JButton btnMultiplicar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField txtNumeroDos;
-    private javax.swing.JTextField txtNumeroUno;
-    private javax.swing.JTextField txtResultado;
+    public javax.swing.JTextField txtNumeroDos;
+    public javax.swing.JTextField txtNumeroUno;
+    public javax.swing.JTextField txtResultado;
     // End of variables declaration//GEN-END:variables
 }
