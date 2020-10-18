@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package Modelo;
+
+
+
 /**
  * Clase modelo 
  * @author Daniel Zambrano
@@ -12,66 +15,67 @@ package Modelo;
  */
 public class modelo {
     /**
-     * variable que almacena el primer numero a multiplicar
+     * variable que almacena el valor del dolar a cambiar 
      */
-    private int numeroUno;
+    private double dolar;
     /**
-     * variable que almacena el segundo numero a multiplicar
+     * variable que almacena el valor actual equivalente a un dolar en pesos 
+     * colombianos
      */
-    private int numeroDos;
+    private final double valorCambioCop = 3848.10;
     /**
-     * variable que almacena el resultado
+     * variable que almacena el valor actual equivalente a un dolar
+     * en yenes
      */
-    private int resultado;
-
+    private final double valorCambioYen = 105.36;
     /**
-     * metodo que  realiza la operacion de la multiplicacion
-     * @return 
+     * variable que almacena el valor actual equivalente a un dolar
+     * en euros
      */
-    public int multiplicar(){
-        this.setResultado(this.getNumeroUno() * this.getNumeroDos());
-       return this.getResultado();
+    private final double valorCambioEuro = 0.85;
+    /**
+     * arreglo que almacena el valor las divisas en una posicion
+     * segun el valor en dolares ingresados
+     */
+    private  double [] divisas = new double[3] ;
+    
+    /**
+     * metodo que multiplica el valor ingresado en dolares por el 
+     * usuario por el valor de cada divisa y lo alamacena en una posicion
+     * del arreglo divisas.
+     */
+    public void  divisas(){
+        
+        getDivisas()[0]=getDolar()*valorCambioCop;
+        getDivisas()[1]=getDolar()*valorCambioYen;
+        getDivisas()[2]=getDolar()*valorCambioEuro;
     }
 
     /**
-     * @return the numeroUno
+     * @return the dolar
      */
-    public int getNumeroUno() {
-        return numeroUno;
+    public double getDolar() {
+        return dolar;
     }
 
     /**
-     * @param numeroUno the numeroUno to set
+     * @param dolar the dolar to set
      */
-    public void setNumeroUno(int numeroUno) {
-        this.numeroUno = numeroUno;
+    public void setDolar(double dolar) {
+        this.dolar = dolar;
     }
 
     /**
-     * @return the numeroDos
+     * @return the divisas
      */
-    public int getNumeroDos() {
-        return numeroDos;
+    public double[] getDivisas() {
+        return divisas;
     }
 
     /**
-     * @param numeroDos the numeroDos to set
+     * @param divisas the divisas to set
      */
-    public void setNumeroDos(int numeroDos) {
-        this.numeroDos = numeroDos;
-    }
-
-    /**
-     * @return the resultado
-     */
-    public int getResultado() {
-        return resultado;
-    }
-
-    /**
-     * @param resultado the resultado to set
-     */
-    public void setResultado(int resultado) {
-        this.resultado = resultado;
+    public void setDivisas(double[] divisas) {
+        this.divisas = divisas;
     }
 }

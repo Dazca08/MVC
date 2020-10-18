@@ -20,7 +20,7 @@ public class Main {
     /**
      * Se crean objeto de tipo vista y de tipo modelo y 
      * de tipo controlador luego en el constructor del controlador se pasa
-     * como parametro el objeto de tipo vista  y el onjeto de tipo modelo
+     * como parametro el objeto de tipo vista  y el objeto de tipo modelo
      * @param args 
      */
     public static void main(String args []){
